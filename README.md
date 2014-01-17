@@ -3,7 +3,7 @@
 This clickstart integrates rest functionalities on JavaEE container (Jboss), using:
 
 		EJB 3.2
-		Jersey 1.9
+		Jersey 2.5
 		Jboss 8 (uncomment line in persistence.xml to make it work in jboss 7.2)
 		Java 7
 
@@ -13,11 +13,11 @@ Press the button to build, test and deploy this instantly:
 
 ## Running the project locally
 ```
-	git clone https://github.com/valentina1987/jboss-rest-ejb-clickstart.git
+	git clone https://github.com/valentina1987/jboss-restEasy-ejb-clickstart.git
 	mvn wildfly:run ( or mvn jboss7:run)
 ```
 
-You can access this web-app at: http://localhost:8080/jboss-rest-ejb-clickstart/
+You can access this web-app at: http://localhost:8080/jboss-restEasy-ejb-clickstart/
 
 
 
@@ -37,7 +37,7 @@ If m2e is not there, just follow the install process here: http://eclipse.org/m2
 
 1) In the command line
 ```
-git clone git@github.com:valentina1987/jboss-rest-ejb-clickstart.git
+git clone git@github.com:valentina1987/jboss-restEasy-ejb-clickstart.git
 ```
 2) Inside Eclipse
 ```
