@@ -58,12 +58,6 @@ public class CountryResource {
 	@Context
 	UriInfo uriInfo;
 
-	/**
-	 * EJB annotation does not work with REST services, thus we defined a
-	 * provider as workaround that will inject the object annotated by @EJB (see
-	 * class EJBProvider) with the specified name (in this case
-	 * CountryRepository).
-	 */
 	@EJB(mappedName = "java:module/CountryRepository")
 	private CountryRepository countryRepository;
 
