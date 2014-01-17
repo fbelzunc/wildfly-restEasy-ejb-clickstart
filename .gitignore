@@ -13,7 +13,3 @@ target/*
 .classpath
 .settings/*
 .settings
-
-#not wanted in the final version#
-src/main/java/localdomain/localhost/CapitalServlet.java
-src/main/java/localdomain/localhost/RestDispatcherServlet.java
