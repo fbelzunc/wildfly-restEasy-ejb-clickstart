@@ -3,7 +3,7 @@
 This clickstart integrates rest functionalities on JavaEE container (Jboss), using:
 
 		EJB 3.2
-		Jboss 8 (uncomment line in persistence.xml to make it work in jboss 7.2)
+		Wildfly 
 		Java 7
 
 Press the button to build, test and deploy this instantly:
@@ -13,7 +13,7 @@ Press the button to build, test and deploy this instantly:
 ## Running the project locally
 ```
 	git clone https://github.com/valentina1987/jboss-restEasy-ejb-clickstart.git
-	mvn wildfly:run ( or mvn jboss7:run)
+	mvn wildfly:run 
 ```
 
 You can access this web-app at: http://localhost:8080/jboss-restEasy-ejb-clickstart/
