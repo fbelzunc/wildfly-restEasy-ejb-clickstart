@@ -3,7 +3,6 @@
 This clickstart integrates rest functionalities on JavaEE container (Jboss), using:
 
 		EJB 3.2
-		Jersey 2.5
 		Jboss 8 (uncomment line in persistence.xml to make it work in jboss 7.2)
 		Java 7
 
