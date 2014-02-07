@@ -50,9 +50,9 @@ public class CountryRepository {
 
 		String name = country.getName();
 		Query q = em
-				.createQuery(
-						"select country from Country country where country.name = :name")
-				.setParameter("name", name);
+		        .createQuery(
+		                "select country from Country country where country.name = :name")
+		        .setParameter("name", name);
 		Country old = (Country) q.getSingleResult();
 		if (!old.equals(null)) {
 			old.setCapital(country.getCapital());
@@ -61,12 +61,12 @@ public class CountryRepository {
 	}
 
 	public Country findByName(String name) throws NonUniqueResultException,
-			EntityNotFoundException {
+	        EntityNotFoundException {
 
 		Query q = em
-				.createQuery(
-						"select country from Country country where country.name = :name")
-				.setParameter("name", name);
+		        .createQuery(
+		                "select country from Country country where country.name = :name")
+		        .setParameter("name", name);
 		return (Country) q.getSingleResult();
 
 	}
@@ -74,8 +74,8 @@ public class CountryRepository {
 	public void delete(String name) {
 
 		Query q = em.createQuery(
-				"delete from Country country where country.name = :name")
-				.setParameter("name", name);
+		        "delete from Country country where country.name = :name")
+		        .setParameter("name", name);
 		q.executeUpdate();
 
 	}
@@ -83,7 +83,7 @@ public class CountryRepository {
 	public List<Country> getAll() {
 
 		Query q = em.createQuery("select country from Country country");
-		List<Country> countries = (List<Country>) q.getResultList();
+		List<Country> countries = q.getResultList();
 		return countries;
 
 	}

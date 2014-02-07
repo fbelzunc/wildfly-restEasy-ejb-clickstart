@@ -20,7 +20,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.ejb.Stateless;
-import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
 /**
@@ -32,6 +31,7 @@ import javax.ws.rs.core.Application;
 @Stateless
 public class MyApplication extends Application {
 
+	@Override
 	public Set<Class<?>> getClasses() {
 		Set<Class<?>> s = new HashSet<Class<?>>();
 		s.add(CountryResource.class);

@@ -66,8 +66,9 @@ public class Country implements Serializable {
 		this.name = name;
 	}
 
+	@Override
 	public String toString() {
 		return "Country(id=" + id + ", capital=" + capital + ", name=" + name
-				+ ")";
+		        + ")";
 	}
 }

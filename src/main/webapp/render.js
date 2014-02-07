@@ -9,7 +9,7 @@ function formatXml(xml) {
 			indent = 0;
 		} else if (node.match( /^<\/\w/ )) {
 			if (pad != 0) {
-				pad -= 1;
+    pad -= 1;
 			}
 		} else if (node.match( /^<\w[^>]*[^\/]>.*$/ )) {
 			indent = 1;
@@ -48,7 +48,7 @@ function formatJson(val) {
 			pos = pos - 1;
 			
 			for (var j=0; j<pos; j++) {
-				retval = retval + indentStr;
+    retval = retval + indentStr;
 			}
 		}
 		
@@ -58,11 +58,11 @@ function formatJson(val) {
 			retval = retval + newLine;
 			
 			if (char == '{' || char == '[') {
-				pos = pos + 1;
+    pos = pos + 1;
 			}
 			
 			for (var k=0; k<pos; k++) {
-				retval = retval + indentStr;
+    retval = retval + indentStr;
 			}
 		}
 	}
@@ -117,8 +117,8 @@ function renderList(data) {
 	$('#ajaxformgetAll').append("<table id='countryList'></table>");
 	$.each(list, function(index, country) {
 		$('#countryList').append(
-				'<tr><td>' + country.name + '</td><td>'
-				+ country.capital
-				+ '</td></tr>');
+    '<tr><td>' + country.name + '</td><td>'
+    + country.capital
+    + '</td></tr>');
 	});
 }

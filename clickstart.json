@@ -5,7 +5,7 @@
     "description" : "Basic RestEasy Java EE 7 app deployed on Wildfly 8 Web Profile",
     "doc-url" : "https://github.com/CloudBees-community/wildfly-restEasy-ejb-clickstart/blob/master/README.md",
     "icon" : "https://raw.github.com/CloudBees-community/wildfly-restEasy-ejb-clickstart/master/icon.png",
-    "disabled" : false,
+    "disabled" : true,
     "supported-by" : "community",
    // "app-package" : "https://community.ci.cloudbees.com/job/wildfly-restEasy-ejb-clickstart/lastSuccessfulBuild/artifact/target/wildfly8-clickstart-1.0.0-SNAPSHOT.war",
 

@@ -43,116 +43,116 @@
 
 			<div class=left>
 
-				<div class="t">
-					<form id="ajaxformpost" action="rest/country/" method="post">
+    <div class="t">
+    	<form id="ajaxformpost" action="rest/country/" method="post">
 
-						<table align="center" id="postTable">
-							<caption>CREATE COUNTRY</caption>
-							<tr>
-								<td><b>Nation</b>
-								<td><input type="text" name="name" id="nationNamePost">
-								<td>
-							</tr>
-							<tr>
-								<td><b>Capital </b></td>
-								<td><input type="text" name="capital"></td>
-							</tr>
-							<tr>
-								<td><input type="submit" value="save"></td>
-							</tr>
-						</table>
-					</form>
-				</div>
+    		<table align="center" id="postTable">
+    			<caption>CREATE COUNTRY</caption>
+    			<tr>
+        <td><b>Nation</b>
+        <td><input type="text" name="name" id="nationNamePost">
+        <td>
+    			</tr>
+    			<tr>
+        <td><b>Capital </b></td>
+        <td><input type="text" name="capital"></td>
+    			</tr>
+    			<tr>
+        <td><input type="submit" value="save"></td>
+    			</tr>
+    		</table>
+    	</form>
+    </div>
 
-				<div class="t">
-					<form id="ajaxformupdate" action="rest/country/" method="put">
+    <div class="t">
+    	<form id="ajaxformupdate" action="rest/country/" method="put">
 
-						<table align="center" id="updateTable">
-							<caption>UPDATE COUNTRY</caption>
-							<tr>
-								<td><b>Nation</b>
-								<td><input type="text" name="name" id="nationNameUpdate">
-								<td>
-							</tr>
-							<tr>
-								<td><b>Capital </b></td>
-								<td><input type="text" name="capital"></td>
-							</tr>
-							<tr>
-								<td><input type="submit" value="update"></td>
-							</tr>
-						</table>
-					</form>
-				</div>
+    		<table align="center" id="updateTable">
+    			<caption>UPDATE COUNTRY</caption>
+    			<tr>
+        <td><b>Nation</b>
+        <td><input type="text" name="name" id="nationNameUpdate">
+        <td>
+    			</tr>
+    			<tr>
+        <td><b>Capital </b></td>
+        <td><input type="text" name="capital"></td>
+    			</tr>
+    			<tr>
+        <td><input type="submit" value="update"></td>
+    			</tr>
+    		</table>
+    	</form>
+    </div>
 
 
-				<div class="t">
+    <div class="t">
 
-					<form id="ajaxformget" action="rest/country/" method="get"
-						name="getCapitalByNation">
-						<table align="center" class="nobottomborder">
-							<caption>SEARCH COUNTRY</caption>
-							<tr>
-								<td><b>Nation</b>
-								<td><input type="text" name="nationToRetrieve"
-									id="nationName">
-								<td>
-							</tr>
-							<tr>
-								<td><b>Capital </b></td>
-								<td id="capitalRetrieved"></td>
-							</tr>
+    	<form id="ajaxformget" action="rest/country/" method="get"
+    		name="getCapitalByNation">
+    		<table align="center" class="nobottomborder">
+    			<caption>SEARCH COUNTRY</caption>
+    			<tr>
+        <td><b>Nation</b>
+        <td><input type="text" name="nationToRetrieve"
+        	id="nationName">
+        <td>
+    			</tr>
+    			<tr>
+        <td><b>Capital </b></td>
+        <td id="capitalRetrieved"></td>
+    			</tr>
 
-							<table id="getTable" class="noupborder">
-								<tr>
-									<td><input type="submit" value="search"></td>
-									<td><input id="xmlbynamebutton" type="button"
-										value="getXml"></td>
-									<td><input id="jsonbynamebutton" type="button"
-										value="getJson"></td>
+    			<table id="getTable" class="noupborder">
+        <tr>
+        	<td><input type="submit" value="search"></td>
+        	<td><input id="xmlbynamebutton" type="button"
+        		value="getXml"></td>
+        	<td><input id="jsonbynamebutton" type="button"
+        		value="getJson"></td>
 
-								</tr>
-							</table>
-						</table>
-					</form>
-				</div>
+        </tr>
+    			</table>
+    		</table>
+    	</form>
+    </div>
 
-				<div class="t">
+    <div class="t">
 
-					<form id="ajaxformdelete" action="rest/country/" method="get">
-						<table align="center" id="deleteTable">
-							<caption>DELETE COUNTRY</caption>
-							<tr>
-								<td><b>Name</b>
-								<td><input type="text" id="nameToDelete">
-								<td>
-							</tr>
-							<tr>
-								<td><input type="submit" value="Delete"></td>
-							</tr>
-						</table>
-					</form>
-				</div>
+    	<form id="ajaxformdelete" action="rest/country/" method="get">
+    		<table align="center" id="deleteTable">
+    			<caption>DELETE COUNTRY</caption>
+    			<tr>
+        <td><b>Name</b>
+        <td><input type="text" id="nameToDelete">
+        <td>
+    			</tr>
+    			<tr>
+        <td><input type="submit" value="Delete"></td>
+    			</tr>
+    		</table>
+    	</form>
+    </div>
 			</div>
 			<div class="right">
-				<div class="t">
-					<tr>
+    <div class="t">
+    	<tr>
 
-						<form id="ajaxformgetAll" action="rest/country/" method="get">
+    		<form id="ajaxformgetAll" action="rest/country/" method="get">
 
-							<table align="center" id="countries">
-								<caption>LIST COUNTRIES</caption>
+    			<table align="center" id="countries">
+        <caption>LIST COUNTRIES</caption>
 
-								<tr>
-									<td><input type="submit" value="getAll"></td>
-									<td><input id="xmlbutton" type="button" value="getXml"></td>
-									<td><input id="jsonbutton" type="button" value="getJson"></td>
-								</tr>
+        <tr>
+        	<td><input type="submit" value="getAll"></td>
+        	<td><input id="xmlbutton" type="button" value="getXml"></td>
+        	<td><input id="jsonbutton" type="button" value="getJson"></td>
+        </tr>
 
-							</table>
+    			</table>
 
-						</form>
-				</div>
+    		</form>
+    </div>
 			</div>
 		</div>
 

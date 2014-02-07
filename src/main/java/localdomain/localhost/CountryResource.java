@@ -66,14 +66,14 @@ public class CountryResource {
 	@Consumes(APPLICATION_FORM_URLENCODED)
 	@Produces(APPLICATION_JSON)
 	public Response create(@FormParam("capital") String capital,
-			@FormParam("name") String name) {
+	        @FormParam("name") String name) {
 
 		Country country = new Country(capital, name);
 		countryRepository.create(country);
 		logger.info("created country with name {} and capital {}",
-				country.getName(), country.getCapital());
+		        country.getName(), country.getCapital());
 		return Response.created(
-				uriInfo.getAbsolutePathBuilder().path(name).build()).build();
+		        uriInfo.getAbsolutePathBuilder().path(name).build()).build();
 
 	}
 
@@ -82,14 +82,14 @@ public class CountryResource {
 	@Consumes(APPLICATION_FORM_URLENCODED)
 	@Produces(APPLICATION_JSON)
 	public Response updateCountry(@FormParam("capital") String capital,
-			@FormParam("name") String name) {
+	        @FormParam("name") String name) {
 
 		Country country = new Country(capital, name);
 		countryRepository.upadte(country);
 		logger.info("created country with name {} and capital {}",
-				country.getName(), country.getCapital());
+		        country.getName(), country.getCapital());
 		return Response.created(
-				uriInfo.getAbsolutePathBuilder().path(name).build()).build();
+		        uriInfo.getAbsolutePathBuilder().path(name).build()).build();
 
 	}
 
