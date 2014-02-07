@@ -7,7 +7,6 @@
     "icon" : "https://raw.github.com/CloudBees-community/wildfly-restEasy-ejb-clickstart/master/icon.png",
     "disabled" : true,
     "supported-by" : "community",
-    "disabled: true",
    // "app-package" : "https://community.ci.cloudbees.com/job/wildfly-restEasy-ejb-clickstart/lastSuccessfulBuild/artifact/target/wildfly8-clickstart-1.0.0-SNAPSHOT.war",
 
     "runtime": {
