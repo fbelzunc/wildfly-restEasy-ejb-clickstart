@@ -18,10 +18,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>localdomain.localhost</groupId>
-	<artifactId>jboss-restEasy-ejb-clickstart</artifactId>
+	<artifactId>wildfly-restEasy-ejb-clickstart</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>jboss-rest-ejb-clickstart</name>
+	<name>wildfly-restEasy-ejb-clickstart</name>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
