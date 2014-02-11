@@ -7,7 +7,7 @@
     "icon" : "https://raw.github.com/CloudBees-community/wildfly-restEasy-ejb-clickstart/master/icon.png",
     "disabled" : true,
     "supported-by" : "community",
-    "app-package" : "http://repository-community.forge.cloudbees.com/release/localdomain/localhost/wildfly-restEasy-ejb-clickstart/0.0.1/wildfly-restEasy-ejb-clickstart-0.0.1.war",
+    "app-package" : "https://repository-community.forge.cloudbees.com/release/localdomain/localhost/wildfly-restEasy-ejb-clickstart/0.0.1/wildfly-restEasy-ejb-clickstart-0.0.1.war",
 
     "runtime": {
         "type": "wildfly8",
