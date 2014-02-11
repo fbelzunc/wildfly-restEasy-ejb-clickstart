@@ -84,26 +84,26 @@
 			</plugin>
 		</plugins>
 		<extensions>
-            <extension>
-                <groupId>org.apache.maven.wagon</groupId>
-                <artifactId>wagon-webdav</artifactId>
-                <version>1.0-beta-2</version>
-            </extension>
-        </extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-webdav</artifactId>
+				<version>1.0-beta-2</version>
+			</extension>
+		</extensions>
 	</build>
 	<scm>
-        <connection>scm:git:https://github.com/CloudBees-community/wildfly-restEasy-ejb-clickstart.git</connection>
-        <tag>HEAD</tag>
-    </scm>
-    <distributionManagement>
-        <repository>
-            <id>community-release</id>
-            <url>dav:https://repository-community.forge.cloudbees.com/release/</url>
-        </repository>
-        <snapshotRepository>
-            <id>community-snapshot</id>
-            <url>dav:https://repository-community.forge.cloudbees.com/snapshot/</url>
-        </snapshotRepository>
-    </distributionManagement>
+		<connection>scm:git:https://github.com/CloudBees-community/wildfly-restEasy-ejb-clickstart.git</connection>
+		<tag>HEAD</tag>
+	</scm>
+	<distributionManagement>
+		<repository>
+			<id>community-release</id>
+			<url>dav:https://repository-community.forge.cloudbees.com/release/</url>
+		</repository>
+		<snapshotRepository>
+			<id>community-snapshot</id>
+			<url>dav:https://repository-community.forge.cloudbees.com/snapshot/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 </project>
