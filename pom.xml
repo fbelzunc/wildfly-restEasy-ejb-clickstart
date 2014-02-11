@@ -14,13 +14,12 @@
   ~ limitations under the License.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>localdomain.localhost</groupId>
 	<artifactId>wildfly-restEasy-ejb-clickstart</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>wildfly-restEasy-ejb-clickstart</name>
 	<dependencies>
 		<dependency>
@@ -93,7 +92,7 @@
 	</build>
 	<scm>
 		<connection>scm:git:https://github.com/CloudBees-community/wildfly-restEasy-ejb-clickstart.git</connection>
-		<tag>HEAD</tag>
+		<tag>wildfly-restEasy-ejb-clickstart-0.0.1</tag>
 	</scm>
 	<distributionManagement>
 		<repository>
