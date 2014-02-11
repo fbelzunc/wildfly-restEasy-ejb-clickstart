@@ -32,43 +32,43 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Country implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	@Id
-	@GeneratedValue
-	private int id;
-	@Basic
-	private String capital;
-	@Basic
-	@Column(unique = true)
-	private String name;
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue
+    private int id;
+    @Basic
+    private String capital;
+    @Basic
+    @Column(unique = true)
+    private String name;
 
-	public String getCapital() {
-		return capital;
-	}
+    public String getCapital() {
+        return capital;
+    }
 
-	public void setCapital(String capital) {
-		this.capital = capital;
-	}
+    public void setCapital(String capital) {
+        this.capital = capital;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public Country() {
-	}
+    public Country() {
+    }
 
-	public Country(String capital, String name) {
-		this.capital = capital;
-		this.name = name;
-	}
+    public Country(String capital, String name) {
+        this.capital = capital;
+        this.name = name;
+    }
 
-	@Override
-	public String toString() {
-		return "Country(id=" + id + ", capital=" + capital + ", name=" + name
-		        + ")";
-	}
+    @Override
+    public String toString() {
+        return "Country(id=" + id + ", capital=" + capital + ", name=" + name
+                + ")";
+    }
 }

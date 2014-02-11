@@ -31,11 +31,11 @@ import javax.ws.rs.core.Application;
 @Stateless
 public class MyApplication extends Application {
 
-	@Override
-	public Set<Class<?>> getClasses() {
-		Set<Class<?>> s = new HashSet<Class<?>>();
-		s.add(CountryResource.class);
-		return s;
-	}
+    @Override
+    public Set<Class<?>> getClasses() {
+        Set<Class<?>> s = new HashSet<Class<?>>();
+        s.add(CountryResource.class);
+        return s;
+    }
 
 }

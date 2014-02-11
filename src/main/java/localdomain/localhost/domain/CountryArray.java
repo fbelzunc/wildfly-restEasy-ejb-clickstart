@@ -31,14 +31,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class CountryArray {
 
-	List<Country> countries = new ArrayList<Country>();
+    List<Country> countries = new ArrayList<Country>();
 
-	public List<Country> getCountries() {
-		return countries;
-	}
+    public List<Country> getCountries() {
+        return countries;
+    }
 
-	public void setCountries(List<Country> countries) {
-		this.countries = countries;
-	}
+    public void setCountries(List<Country> countries) {
+        this.countries = countries;
+    }
 
 }

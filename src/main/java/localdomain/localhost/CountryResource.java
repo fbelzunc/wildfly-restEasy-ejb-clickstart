@@ -53,82 +53,82 @@ import org.slf4j.LoggerFactory;
 @Path("/country")
 @Stateless
 public class CountryResource {
-	Logger logger = LoggerFactory.getLogger(CountryResource.class);
+    Logger logger = LoggerFactory.getLogger(CountryResource.class);
 
-	@Context
-	UriInfo uriInfo;
+    @Context
+    UriInfo uriInfo;
 
-	@EJB(mappedName = "java:module/CountryRepository")
-	private CountryRepository countryRepository;
+    @EJB(mappedName = "java:module/CountryRepository")
+    private CountryRepository countryRepository;
 
-	@Path("/")
-	@POST
-	@Consumes(APPLICATION_FORM_URLENCODED)
-	@Produces(APPLICATION_JSON)
-	public Response create(@FormParam("capital") String capital,
-	        @FormParam("name") String name) {
+    @Path("/")
+    @POST
+    @Consumes(APPLICATION_FORM_URLENCODED)
+    @Produces(APPLICATION_JSON)
+    public Response create(@FormParam("capital") String capital,
+            @FormParam("name") String name) {
 
-		Country country = new Country(capital, name);
-		countryRepository.create(country);
-		logger.info("created country with name {} and capital {}",
-		        country.getName(), country.getCapital());
-		return Response.created(
-		        uriInfo.getAbsolutePathBuilder().path(name).build()).build();
+        Country country = new Country(capital, name);
+        countryRepository.create(country);
+        logger.info("created country with name {} and capital {}",
+                country.getName(), country.getCapital());
+        return Response.created(
+                uriInfo.getAbsolutePathBuilder().path(name).build()).build();
 
-	}
+    }
 
-	@Path("/")
-	@PUT
-	@Consumes(APPLICATION_FORM_URLENCODED)
-	@Produces(APPLICATION_JSON)
-	public Response updateCountry(@FormParam("capital") String capital,
-	        @FormParam("name") String name) {
+    @Path("/")
+    @PUT
+    @Consumes(APPLICATION_FORM_URLENCODED)
+    @Produces(APPLICATION_JSON)
+    public Response updateCountry(@FormParam("capital") String capital,
+            @FormParam("name") String name) {
 
-		Country country = new Country(capital, name);
-		countryRepository.upadte(country);
-		logger.info("created country with name {} and capital {}",
-		        country.getName(), country.getCapital());
-		return Response.created(
-		        uriInfo.getAbsolutePathBuilder().path(name).build()).build();
+        Country country = new Country(capital, name);
+        countryRepository.upadte(country);
+        logger.info("created country with name {} and capital {}",
+                country.getName(), country.getCapital());
+        return Response.created(
+                uriInfo.getAbsolutePathBuilder().path(name).build()).build();
 
-	}
+    }
 
-	@Path("/")
-	@GET
-	@Produces({ APPLICATION_JSON, APPLICATION_XML })
-	public Response getAll() {
+    @Path("/")
+    @GET
+    @Produces({ APPLICATION_JSON, APPLICATION_XML })
+    public Response getAll() {
 
-		List<Country> countries = countryRepository.getAll();
-		CountryArray countryarr = new CountryArray();
-		countryarr.setCountries(countries);
-		return Response.ok(countryarr).build();
+        List<Country> countries = countryRepository.getAll();
+        CountryArray countryarr = new CountryArray();
+        countryarr.setCountries(countries);
+        return Response.ok(countryarr).build();
 
-	}
+    }
 
-	@Path("/{name}")
-	@DELETE
-	public Response deleteCountry(@PathParam("name") String name) {
+    @Path("/{name}")
+    @DELETE
+    public Response deleteCountry(@PathParam("name") String name) {
 
-		countryRepository.delete(name);
-		return Response.noContent().build();
-	}
+        countryRepository.delete(name);
+        return Response.noContent().build();
+    }
 
-	@Path("/{name}")
-	@GET
-	@Produces({ APPLICATION_JSON, APPLICATION_XML })
-	public Response get(@PathParam("name") String name) {
+    @Path("/{name}")
+    @GET
+    @Produces({ APPLICATION_JSON, APPLICATION_XML })
+    public Response get(@PathParam("name") String name) {
 
-		try {
-			Country country = countryRepository.findByName(name);
-			return Response.ok(country).build();
-		} catch (EntityNotFoundException e) {
-			logger.error("Country name {} not found", name);
-			return Response.status(Status.NOT_FOUND).build();
-		} catch (NoResultException e) {
-			logger.error("Country with name {} not found", name);
-			return Response.status(Status.NOT_FOUND).build();
-		}
+        try {
+            Country country = countryRepository.findByName(name);
+            return Response.ok(country).build();
+        } catch (EntityNotFoundException e) {
+            logger.error("Country name {} not found", name);
+            return Response.status(Status.NOT_FOUND).build();
+        } catch (NoResultException e) {
+            logger.error("Country with name {} not found", name);
+            return Response.status(Status.NOT_FOUND).build();
+        }
 
-	}
+    }
 
 }

@@ -36,56 +36,56 @@ import localdomain.localhost.domain.Country;
 
 @Stateless
 public class CountryRepository {
-	Logger logger = LoggerFactory.getLogger(CountryRepository.class);
-	@PersistenceContext
-	private EntityManager em;
+    Logger logger = LoggerFactory.getLogger(CountryRepository.class);
+    @PersistenceContext
+    private EntityManager em;
 
-	public void create(Country... clist) {
-		for (Country c : clist) {
-			em.persist(c);
-		}
-	}
+    public void create(Country... clist) {
+        for (Country c : clist) {
+            em.persist(c);
+        }
+    }
 
-	public void upadte(Country country) {
+    public void upadte(Country country) {
 
-		String name = country.getName();
-		Query q = em
-		        .createQuery(
-		                "select country from Country country where country.name = :name")
-		        .setParameter("name", name);
-		Country old = (Country) q.getSingleResult();
-		if (!old.equals(null)) {
-			old.setCapital(country.getCapital());
-		}
+        String name = country.getName();
+        Query q = em
+                .createQuery(
+                        "select country from Country country where country.name = :name")
+                .setParameter("name", name);
+        Country old = (Country) q.getSingleResult();
+        if (!old.equals(null)) {
+            old.setCapital(country.getCapital());
+        }
 
-	}
+    }
 
-	public Country findByName(String name) throws NonUniqueResultException,
-	        EntityNotFoundException {
+    public Country findByName(String name) throws NonUniqueResultException,
+            EntityNotFoundException {
 
-		Query q = em
-		        .createQuery(
-		                "select country from Country country where country.name = :name")
-		        .setParameter("name", name);
-		return (Country) q.getSingleResult();
+        Query q = em
+                .createQuery(
+                        "select country from Country country where country.name = :name")
+                .setParameter("name", name);
+        return (Country) q.getSingleResult();
 
-	}
+    }
 
-	public void delete(String name) {
+    public void delete(String name) {
 
-		Query q = em.createQuery(
-		        "delete from Country country where country.name = :name")
-		        .setParameter("name", name);
-		q.executeUpdate();
+        Query q = em.createQuery(
+                "delete from Country country where country.name = :name")
+                .setParameter("name", name);
+        q.executeUpdate();
 
-	}
+    }
 
-	public List<Country> getAll() {
+    public List<Country> getAll() {
 
-		Query q = em.createQuery("select country from Country country");
-		List<Country> countries = q.getResultList();
-		return countries;
+        Query q = em.createQuery("select country from Country country");
+        List<Country> countries = q.getResultList();
+        return countries;
 
-	}
+    }
 
 }
