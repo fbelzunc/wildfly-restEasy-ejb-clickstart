@@ -7,9 +7,13 @@
 # generated target folder #
 target
 target/*
+.idea
+*.iml
+
 
 #others#
 .project
 .classpath
 .settings/*
 .settings
+bin
